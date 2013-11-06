@@ -37,39 +37,39 @@ global $sTemplate, $sUser, $sDB, $sPacket, $sPage;
 $page       = "";
 $language   = $sTemplate->getLangBase();
 ?>
-<? include($sTemplate->getTemplateRootAbs()."header.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."header.php"); ?>
 
 <div id = "content_wide">
   <div class = "thin">
 
   <div class = "signup">
-    <form id = "form_submit" action = "<? echo $sTemplate->getRoot(); ?>manage-profile/" method = "POST">
+    <form id = "form_submit" action = "<?php echo $sTemplate->getRoot(); ?>manage-profile/" method = "POST">
       <div class = "row">
-        <div class = "headline"><? echo $sTemplate->getString("MANAGE_HEADLINE"); ?></div>
+        <div class = "headline"><?php echo $sTemplate->getString("MANAGE_HEADLINE"); ?></div>
       </div>
       <div class = "row">
-        <div class = "label"><? echo $sTemplate->getString("PASSWORD_OLD"); ?></div>
+        <div class = "label"><?php echo $sTemplate->getString("PASSWORD_OLD"); ?></div>
         <div class = "input">
           <input type = "password" id = "password_old" name = "password_old"></input>
         </div>
       </div>
 
       <div class = "row">
-        <div class = "label"><? echo $sTemplate->getString("SIGNUP_PASSWORD"); ?></div>
+        <div class = "label"><?php echo $sTemplate->getString("SIGNUP_PASSWORD"); ?></div>
         <div class = "input">
           <input type = "password" id = "password_new" name = "password_new"></input>
         </div>
       </div>
 
       <div class = "row">
-        <div class = "label"><? echo $sTemplate->getString("SIGNUP_PASSWORD_REPEAT"); ?></div>
+        <div class = "label"><?php echo $sTemplate->getString("SIGNUP_PASSWORD_REPEAT"); ?></div>
         <div class = "input">
           <input type = "password" id = "password_new2" name = "password_new2"></input>
         </div>
       </div>
 
       <div class = "row row_submit">
-        <span class = "button_orange" onclick = "$('#form_submit').submit();"><? echo $sTemplate->getString("MANAGE_SUBMIT"); ?></span>
+        <span class = "button_orange" onclick = "$('#form_submit').submit();"><?php echo $sTemplate->getString("MANAGE_SUBMIT"); ?></span>
       </div>
 
       <input type = "hidden" name = "updateProfile" value = "1" />
@@ -82,4 +82,4 @@ $language   = $sTemplate->getLangBase();
 
 </div>
 
-<? include($sTemplate->getTemplateRootAbs()."footer.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."footer.php"); ?>

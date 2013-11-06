@@ -37,7 +37,7 @@ global $sTemplate, $sUser, $sDB, $sPacket, $sPage;
 $page       = "";
 $language   = $sTemplate->getLangBase();
 ?>
-<? include($sTemplate->getTemplateRootAbs()."header.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."header.php"); ?>
 
 <div id = "content_wide">
   <div class = "thin">
@@ -48,34 +48,34 @@ drawArgumentBoxExtended($sPage->getQuestion(), $sPage->getView(), $sPage->basePa
     <form action = "" method = "POST" id = "new_counter_argument">
       <div class = "new_argument">
         <div class = "row">
-          <div class = "label"><? echo $sTemplate->getString("NEW_ARGUMENT_HEADLINE"); ?></div>
+          <div class = "label"><?php echo $sTemplate->getString("NEW_ARGUMENT_HEADLINE"); ?></div>
           <div class = "input">
-            <textarea id = "new_argument_headline" name = "new_argument_headline" maxlength="<? echo MAX_ARGUMENT_HEADLINE_CHR_LENGTH;?>"></textarea>
-            <span class="characters_left"><span id="argument_headline_chars_left"><? echo MAX_ARGUMENT_HEADLINE_CHR_LENGTH;?></span> <? echo $sTemplate->getString("CHARS_WRITTEN_LEFT"); ?></span>
+            <textarea id = "new_argument_headline" name = "new_argument_headline" maxlength="<?php echo MAX_ARGUMENT_HEADLINE_CHR_LENGTH;?>"></textarea>
+            <span class="characters_left"><span id="argument_headline_chars_left"><?php echo MAX_ARGUMENT_HEADLINE_CHR_LENGTH;?></span> <?php echo $sTemplate->getString("CHARS_WRITTEN_LEFT"); ?></span>
           </div>
           <div class="clearfix"></div>
         </div>
 
         <div class = "row">
-          <div class = "label"><? echo $sTemplate->getString("NEW_ARGUMENT_ABSTRACT"); ?></div>
+          <div class = "label"><?php echo $sTemplate->getString("NEW_ARGUMENT_ABSTRACT"); ?></div>
           <div class = "input">
-            <textarea id = "new_argument_abstract" name = "new_argument_abstract" maxlength="<? echo MAX_ARGUMENT_ABS_CHR_LENGTH;?>"></textarea>
-            <span class="characters_left"><span id="argument_headline_abs_chars_left"><? echo MAX_ARGUMENT_ABS_CHR_LENGTH;?></span> <? echo $sTemplate->getString("CHARS_WRITTEN_LEFT"); ?></span>
+            <textarea id = "new_argument_abstract" name = "new_argument_abstract" maxlength="<?php echo MAX_ARGUMENT_ABS_CHR_LENGTH;?>"></textarea>
+            <span class="characters_left"><span id="argument_headline_abs_chars_left"><?php echo MAX_ARGUMENT_ABS_CHR_LENGTH;?></span> <?php echo $sTemplate->getString("CHARS_WRITTEN_LEFT"); ?></span>
           </div>
           <div class="clearfix"></div>
         </div>
 
         <div class = "row">
-          <div class = "label"><? echo $sTemplate->getString("NEW_ARGUMENT_DETAILS"); ?></div>
+          <div class = "label"><?php echo $sTemplate->getString("NEW_ARGUMENT_DETAILS"); ?></div>
           <div class = "input">
             <textarea id = "new_argument_details" name = "new_argument_details"></textarea>
-                <span class="characters_written"><span id="argument_details_chars_written">0</span> <? echo $sTemplate->getString("CHARS_WRITTEN_LEFT"); ?></span>
+                <span class="characters_written"><span id="argument_details_chars_written">0</span> <?php echo $sTemplate->getString("CHARS_WRITTEN_LEFT"); ?></span>
           </div>
           <div class="clearfix"></div>
         </div>
 
         <div class = "row row_submit">
-          <button class = "button_orange" id = "buttonSubmit" onclick = "wikiargument.submitArgument('#new_counter_argument', '#buttonSubmit'); return false;"><? echo $sTemplate->getString("SUBMIT_NEW_ARGUMENT"); ?></button>
+          <button class = "button_orange" id = "buttonSubmit" onclick = "wikiargument.submitArgument('#new_counter_argument', '#buttonSubmit'); return false;"><?php echo $sTemplate->getString("SUBMIT_NEW_ARGUMENT"); ?></button>
         </div>
       </div>
       <input type = "hidden" name = "new_counter_argument" value = "1" />
@@ -85,4 +85,4 @@ drawArgumentBoxExtended($sPage->getQuestion(), $sPage->getView(), $sPage->basePa
 
 </div>
 
-<? include($sTemplate->getTemplateRootAbs()."footer.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."footer.php"); ?>

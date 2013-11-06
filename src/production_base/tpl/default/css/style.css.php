@@ -1,4 +1,4 @@
-<?
+<?php
 /********************************************************************************
  * The contents of this file are subject to the Common Public Attribution License
  * Version 1.0 (the "License"); you may not use this file except in compliance
@@ -39,14 +39,14 @@ header("Content-Type: text/css");
 
 @font-face {
  font-family: 'Imprima' ;
- src: local('Imprima'), local('Imprima-Regular'), url(<? echo $sTemplate->getTemplateRoot(); ?>css/fonts/Imprima-Regular.ttf) format("truetype");
+ src: local('Imprima'), local('Imprima-Regular'), url(<?php echo $sTemplate->getTemplateRoot(); ?>css/fonts/Imprima-Regular.ttf) format("truetype");
 }
 
 @font-face {
   font-family: 'Cantata One';
   font-style: normal;
   font-weight: 400;
-  src: local('Cantata One'), local('CantataOne-Regular'), url(<? echo $sTemplate->getTemplateRoot(); ?>css/fonts/CantataOne-Regular.ttf) format("truetype");
+  src: local('Cantata One'), local('CantataOne-Regular'), url(<?php echo $sTemplate->getTemplateRoot(); ?>css/fonts/CantataOne-Regular.ttf) format("truetype");
 }
 
 
@@ -62,7 +62,7 @@ html, body {
 }
 
 html {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/background.png');
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/background.png');
   background-repeat: repeat;
 }
 
@@ -93,14 +93,14 @@ a {
 }
 
 #header_blue {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/header_background.png');
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/header_background.png');
   height: 54px;
   width: 100%;
   background-repeat: repeat-x;
 }
 
 #header_white {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/header_navigation_background.png');
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/header_navigation_background.png');
   height: 76px;
   width: 100%;
   background-repeat: repeat-x;
@@ -117,7 +117,7 @@ a {
 }
 
 #header_logo {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/header_logo.png');
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/header_logo.png');
   height: 18px;
   width: 226px;
   position: relative;
@@ -135,7 +135,7 @@ a {
 }
 
 #header_logo_unlisted {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/header_logo_unlisted.png');
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/header_logo_unlisted.png');
   height: 18px;
   width: 126px;
   position: absolute;
@@ -144,7 +144,7 @@ a {
 }
 
 #header_logo_unlisted_not_logged_in {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/header_logo_unregistered.png');
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/header_logo_unregistered.png');
   height: 18px;
   width: 197px;
   position: absolute;
@@ -275,7 +275,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e63381cd', e
 }
 
 #footer_logo {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/header_logo.png');
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/header_logo.png');
   height: 18px;
   width: 226px;
   position: relative;
@@ -366,7 +366,7 @@ color:#87cbff;
 }
 
 .remove_icon {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/remove_icon.png');
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/remove_icon.png');
   height: 9px;
   width: 9px;
   position: relative;
@@ -445,21 +445,21 @@ position:absolute;
 .vote_up {
   width: 20px;
   height: 21px;
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/vote_up.png');
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/vote_up.png');
 }
 
 .vote_dn {
   width: 20px;
   height: 21px;
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/vote_dn.png');
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/vote_dn.png');
 }
 
 .vote_up_inactive {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/vote_up_inactive.png');
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/vote_up_inactive.png');
 }
 
 .vote_dn_inactive {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/vote_dn_inactive.png');
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/vote_dn_inactive.png');
 }
 
 .question_vote_up {
@@ -538,7 +538,7 @@ position:absolute;
   padding-top: 3px;
   height: 18px;
   text-align: right;
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/arrows/dropdown-arrow.png') no-repeat 63px center;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/arrows/dropdown-arrow.png') no-repeat 63px center;
   border-left: 1px solid #CCCCCC;
   border-right: 1px solid #CCCCCC;
   border-bottom: 1px solid #CCCCCC;
@@ -564,14 +564,14 @@ position:absolute;
 }
 
 .question_options:hover {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/arrows/dropup-arrow.png') no-repeat 142px 7px #EDEDED;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/arrows/dropup-arrow.png') no-repeat 142px 7px #EDEDED;
 
   height: 110px;
   width: 150px;
 }
 
 .question_options .up_arrow {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/arrows/dropup-arrow.png') no-repeat;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/arrows/dropup-arrow.png') no-repeat;
   display: none;
 }
 
@@ -592,7 +592,7 @@ padding-right:18px;
   padding-left: 5px;
   padding-right: 7px;
   height: 6px;
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/arrows/dn_arrow.png') no-repeat;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/arrows/dn_arrow.png') no-repeat;
   position: relative;
   top: 6px;
   margin-left: 5px;
@@ -603,7 +603,7 @@ padding-right:18px;
   padding-left: 5px;
   padding-right: 7px;
   height: 6px;
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/arrows/up_arrow.png') no-repeat;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/arrows/up_arrow.png') no-repeat;
   position: relative;
   top: 5px;
   margin-left: 5px;
@@ -649,14 +649,14 @@ padding-right:18px;
 }
 
 .pagination_prev {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/pagination_prev.png') no-repeat;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/pagination_prev.png') no-repeat;
   width: 10px;
   height: 14px;
   margin-top: 7px;
 }
 
 .pagination_next {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/pagination_next.png') no-repeat;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/pagination_next.png') no-repeat;
   width: 10px;
   height: 14px;
   margin-top: 7px;
@@ -679,20 +679,20 @@ padding-right:18px;
 }
 
 .icon_twitter {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/icon_twitter.png') no-repeat;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/icon_twitter.png') no-repeat;
 
 }
 
 .icon_fb {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/icon_fb.png') no-repeat;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/icon_fb.png') no-repeat;
 }
 
 .icon_spam {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/icon_spam.png') no-repeat;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/icon_spam.png') no-repeat;
 
 }
 .icon_short_url{
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/icon_short_url.png') no-repeat;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/icon_short_url.png') no-repeat;
 }
 
 
@@ -838,7 +838,7 @@ color:#333;
 
 
 .checkin_icon {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/checkin_confirm.png') no-repeat;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/checkin_confirm.png') no-repeat;
   width: 41px;
   height: 38px;
   float: left;
@@ -1113,7 +1113,7 @@ font-size:16px;
 }
 
 .plus_sign {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/plus_sign.png') no-repeat;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/plus_sign.png') no-repeat;
   height: 18px;
   width: 18px;
   position: absolute;
@@ -1299,7 +1299,7 @@ font-family:"Cantata One";
 width:100%;
 height:40px;
 padding-top:35px;
-background:url(<? echo $sTemplate->getTemplateRoot(); ?>img/assets/plus.png) no-repeat center top;
+background:url(<?php echo $sTemplate->getTemplateRoot(); ?>img/assets/plus.png) no-repeat center top;
 }
 
 .button_new_question {
@@ -1610,7 +1610,7 @@ cursor: pointer;
 }
 
 .signup {
-  background: url("<? echo $sTemplate->getTemplateRoot(); ?>img/backgrounds/register_bg.png") no-repeat scroll center 31px transparent;
+  background: url("<?php echo $sTemplate->getTemplateRoot(); ?>img/backgrounds/register_bg.png") no-repeat scroll center 31px transparent;
     float: left;
     padding-bottom: 40px;
     padding-right: 50px;
@@ -1758,7 +1758,7 @@ background: linear-gradient(to bottom,  #4188c8 0%,#3275b7 100%);
 }
 
 .icon_new_question {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/icon_new_question.png') no-repeat;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/icon_new_question.png') no-repeat;
   width: 26px;
   height: 31px;
   float: left;
@@ -1768,7 +1768,7 @@ background: linear-gradient(to bottom,  #4188c8 0%,#3275b7 100%);
 }
 
 .icon_share_page {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/icon_share_page.png') no-repeat;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/icon_share_page.png') no-repeat;
   width: 32px;
   height: 26px;
   float: left;
@@ -1778,7 +1778,7 @@ background: linear-gradient(to bottom,  #4188c8 0%,#3275b7 100%);
 }
 
 .icon_manage_profile {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/icon_manage_profile.png') no-repeat;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/icon_manage_profile.png') no-repeat;
   width: 24px;
   height: 29px;
   float: left;
@@ -1788,7 +1788,7 @@ background: linear-gradient(to bottom,  #4188c8 0%,#3275b7 100%);
 }
 
 .icon_new_group {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/icon_new_group.png') no-repeat;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/icon_new_group.png') no-repeat;
   width: 32px;
   height: 23px;
   float: left;
@@ -1798,7 +1798,7 @@ background: linear-gradient(to bottom,  #4188c8 0%,#3275b7 100%);
 }
 
 .icon_my_profile {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/icon_my_profile.png') no-repeat;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/icon_my_profile.png') no-repeat;
   width: 23px;
   height: 27px;
   float: left;
@@ -1808,7 +1808,7 @@ background: linear-gradient(to bottom,  #4188c8 0%,#3275b7 100%);
 }
 
 .icon_logout {
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/icon_logout.png') no-repeat;
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/icon_logout.png') no-repeat;
   width: 18px;
   height: 30px;
   float: left;
@@ -2032,7 +2032,7 @@ background: linear-gradient(to bottom,  #fde6c1 0%,#fdeed6 50%,#fde7c5 100%); /*
     right: -19px;
     top: -1px;
     width: 20px;
-  background: url("<? echo $sTemplate->getTemplateRoot(); ?>img/arrows/arrow_blue.png") no-repeat scroll 0 0 transparent;
+  background: url("<?php echo $sTemplate->getTemplateRoot(); ?>img/arrows/arrow_blue.png") no-repeat scroll 0 0 transparent;
 
 }
 
@@ -2078,7 +2078,7 @@ margin-left:30px;
     position: absolute;
     top: -2px;
     width: 20px;
-  background: url("<? echo $sTemplate->getTemplateRoot(); ?>img/arrows/arrow_orange.png") no-repeat scroll 0 0 transparent;
+  background: url("<?php echo $sTemplate->getTemplateRoot(); ?>img/arrows/arrow_orange.png") no-repeat scroll 0 0 transparent;
 
 }
 .checkin_con:hover,.checkin_pro:hover{
@@ -2108,7 +2108,7 @@ float:left;
     line-height: 29px;
     padding-left: 43px;
     position: relative;
-background:url(<? echo $sTemplate->getTemplateRoot(); ?>img/assets/info_tip.png) no-repeat left center;
+background:url(<?php echo $sTemplate->getTemplateRoot(); ?>img/assets/info_tip.png) no-repeat left center;
 
 }
 
@@ -2119,7 +2119,7 @@ font-family:"Imprima", sans-serif;
 }
 
 .current_page{
-background:url(<? echo $sTemplate->getTemplateRoot(); ?>img/assets/selected_page.png) no-repeat center bottom;
+background:url(<?php echo $sTemplate->getTemplateRoot(); ?>img/assets/selected_page.png) no-repeat center bottom;
 
 }
 
@@ -2144,18 +2144,18 @@ display:block;
 }
 
 #footer_socials .footer_twitter{
-background:url(<? echo $sTemplate->getTemplateRoot(); ?>img/socials/twitter.png) no-repeat center top;
+background:url(<?php echo $sTemplate->getTemplateRoot(); ?>img/socials/twitter.png) no-repeat center top;
 }
 #footer_socials .footer_twitter:hover{
-background:url(<? echo $sTemplate->getTemplateRoot(); ?>img/socials/twitter.png) no-repeat center bottom;
+background:url(<?php echo $sTemplate->getTemplateRoot(); ?>img/socials/twitter.png) no-repeat center bottom;
 }
 
 #footer_socials .footer_facebook{
-background:url(<? echo $sTemplate->getTemplateRoot(); ?>img/socials/facebook.png) no-repeat center top;
+background:url(<?php echo $sTemplate->getTemplateRoot(); ?>img/socials/facebook.png) no-repeat center top;
 }
 
 #footer_socials .footer_facebook:hover{
-background:url(<? echo $sTemplate->getTemplateRoot(); ?>img/socials/facebook.png)no-repeat center bottom;
+background:url(<?php echo $sTemplate->getTemplateRoot(); ?>img/socials/facebook.png)no-repeat center bottom;
 }
 
 #user_tips{
@@ -2187,12 +2187,12 @@ margin-bottom:0px;
 }
 
 .recent_questions li {
-  background:url(<? echo $sTemplate->getTemplateRoot(); ?>img/assets/question.png) no-repeat left top;
+  background:url(<?php echo $sTemplate->getTemplateRoot(); ?>img/assets/question.png) no-repeat left top;
   padding-left:40px;
 }
 
 .recent_arguments li {
-  background:url(<? echo $sTemplate->getTemplateRoot(); ?>img/assets/argument.png) no-repeat left top;
+  background:url(<?php echo $sTemplate->getTemplateRoot(); ?>img/assets/argument.png) no-repeat left top;
   padding-left:40px;
 }
 
@@ -2241,7 +2241,7 @@ border:0px;
 }
 
 .ui-widget-content {
-  background: url(<? echo $sTemplate->getTemplateRoot(); ?>img/assets/alert_info.png) no-repeat 40px 40px #FFF;
+  background: url(<?php echo $sTemplate->getTemplateRoot(); ?>img/assets/alert_info.png) no-repeat 40px 40px #FFF;
   font-family: "Imprima", sans-serif;
   padding-left: 75px;
   padding-top: 33px;
@@ -2351,7 +2351,7 @@ clear:both;
   top: 0px;
   width: 31px;
   height: 31px;
-  background: url('<? echo $sTemplate->getTemplateRoot(); ?>img/icon_num_arguments.png');
+  background: url('<?php echo $sTemplate->getTemplateRoot(); ?>img/icon_num_arguments.png');
 }
 
 #new_group_title {

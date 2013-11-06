@@ -37,7 +37,7 @@ global $sTemplate, $sUser, $sDB, $sPacket, $sPage;
 $page       = "";
 $language   = $sTemplate->getLangBase();
 ?>
-<? include($sTemplate->getTemplateRootAbs()."header.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."header.php"); ?>
 
 <div id = "content_wide">
   <div class = "thin">
@@ -47,9 +47,9 @@ drawQuestionBoxExtended($sPage->getQuestion(), $sPage->getView(), $sPage->basePa
   </div>
 
   <div class = 'argument_container_full'>
-<? echo drawArgumentBoxFull($sPage->getQuestion(), $sPage->getArgument(), $sPage->basePath()); ?>
+<?php echo drawArgumentBoxFull($sPage->getQuestion(), $sPage->getArgument(), $sPage->basePath()); ?>
   </div>
 
 </div>
 
-<? include($sTemplate->getTemplateRootAbs()."footer.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."footer.php"); ?>

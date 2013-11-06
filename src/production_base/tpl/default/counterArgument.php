@@ -37,7 +37,7 @@ global $sTemplate, $sUser, $sDB, $sPacket, $sPage, $sPermissions;
 $page       = "";
 $language   = $sTemplate->getLangBase();
 ?>
-<? include($sTemplate->getTemplateRootAbs()."header.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."header.php"); ?>
 
 <div id = "content_wide">
   <div class = "thin">
@@ -62,13 +62,13 @@ if(!$sUser->isLoggedIn() && !$sPage->getQuestion()->hasFlag(QUESTION_FLAG_PART_A
     $onClick = "wikiargument.raiseError(\"".$sTemplate->getString("NOTICE_NEW_COUNTER_ARGUMENT_NO_PERMISSION")."\"); return false;";
 }
 ?>
-    <a class="add-new-argument" href = "<? echo $sPage->getArgument()->urlNewCounterArgument($sPage->basePath()); ?>" onclick = '<? echo $onClick; ?>'>
+    <a class="add-new-argument" href = "<?php echo $sPage->getArgument()->urlNewCounterArgument($sPage->basePath()); ?>" onclick = '<?php echo $onClick; ?>'>
       <div class = "button_argument button_new_counter_argument">
-        <span><? echo $sTemplate->getString("NEW_COUNTER_ARGUMENT"); ?></span>
+        <span><?php echo $sTemplate->getString("NEW_COUNTER_ARGUMENT"); ?></span>
       </div>
     </a>
   </div>
 
 </div>
 
-<? include($sTemplate->getTemplateRootAbs()."footer.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."footer.php"); ?>

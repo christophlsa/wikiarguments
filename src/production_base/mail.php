@@ -1,4 +1,4 @@
-<?
+<?php
 define("HEAD_CRLF","\r\n");
 
 class HTMLMail {

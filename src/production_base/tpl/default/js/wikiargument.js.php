@@ -1,4 +1,4 @@
-<?
+<?php
 /********************************************************************************
  * The contents of this file are subject to the Common Public Attribution License
  * Version 1.0 (the "License"); you may not use this file except in compliance
@@ -96,7 +96,7 @@ _Wikiargument.prototype.raiseNotice = function(msg, callback)
                    create: function (event, ui)
                    {
                        $(".ui-dialog-buttonset button").attr("class","button_orange");
-                       $(".ui-dialog-buttonset button").html("<? echo $sTemplate->getString("LIGHTBOX_CLOSE"); ?>");
+                       $(".ui-dialog-buttonset button").html("<?php echo $sTemplate->getString("LIGHTBOX_CLOSE"); ?>");
                    },
                   });
     return;
@@ -121,7 +121,7 @@ _Wikiargument.prototype.raisePrompt = function(msg, callback_yes, callback_no)
                    buttons:
                    [
                        {
-                           text: "<? echo $sTemplate->getString("LIGHTBOX_PROMPT_YES"); ?>",
+                           text: "<?php echo $sTemplate->getString("LIGHTBOX_PROMPT_YES"); ?>",
                            click: function()
                            {
                                $(this).dialog('close');
@@ -132,7 +132,7 @@ _Wikiargument.prototype.raisePrompt = function(msg, callback_yes, callback_no)
                            }
                        },
                        {
-                           text: "<? echo $sTemplate->getString("LIGHTBOX_PROMPT_NO"); ?>",
+                           text: "<?php echo $sTemplate->getString("LIGHTBOX_PROMPT_NO"); ?>",
                            click: function()
                            {
                                $(this).dialog('close');
@@ -158,11 +158,11 @@ _Wikiargument.prototype.submitArgument = function(formId, buttonId)
 
     if(headline == "")
     {
-        this.raiseError('<? echo $sTemplate->getString("ERROR_NEW_ARGUMENT_MISSING_HEADLINE"); ?>');
+        this.raiseError('<?php echo $sTemplate->getString("ERROR_NEW_ARGUMENT_MISSING_HEADLINE"); ?>');
         return false;
     }else if(abstract == "")
     {
-        this.raiseError('<? echo $sTemplate->getString("ERROR_NEW_ARGUMENT_MISSING_ABSTRACT"); ?>');
+        this.raiseError('<?php echo $sTemplate->getString("ERROR_NEW_ARGUMENT_MISSING_ABSTRACT"); ?>');
         return false;
     }
 
@@ -180,17 +180,17 @@ _Wikiargument.prototype.submitSearch = function(sort)
     var query = $('#navi_search').val();
     //query = query.replace(" ", "-");
 
-    var root  = '<? echo $sTemplate->getRoot(); ?>';
+    var root  = '<?php echo $sTemplate->getRoot(); ?>';
     if(this.group)
     {
         root = root + "groups/" + this.group + "/";
     }
     var url   = "";
 
-    if(sort == <? echo SORT_TOP; ?>)
+    if(sort == <?php echo SORT_TOP; ?>)
     {
         url = root + "tags/trending/" + query + "/";
-    }else if(sort == <? echo SORT_NEWEST; ?>)
+    }else if(sort == <?php echo SORT_NEWEST; ?>)
     {
         url = root + "tags/top/" + query + "/";
     }else
@@ -209,7 +209,7 @@ _Wikiargument.prototype.passRequest = function()
 
     if(!username)
     {
-        this.raiseError('<? echo $sTemplate->getString("ERROR_PASS_REQUEST_MISSING_USERNAME"); ?>');
+        this.raiseError('<?php echo $sTemplate->getString("ERROR_PASS_REQUEST_MISSING_USERNAME"); ?>');
         return false;
     }
 
@@ -236,7 +236,7 @@ _Wikiargument.prototype.sharePage = function(url)
 _Wikiargument.prototype.changeQuestionType = function()
 {
     var val = $('#new_question_type').val();
-    if(val == <? echo QUESTION_TYPE_LISTED; ?>)
+    if(val == <?php echo QUESTION_TYPE_LISTED; ?>)
     {
         $('#row_question_flags').hide();
 
@@ -252,7 +252,7 @@ _Wikiargument.prototype.changeQuestionType = function()
 _Wikiargument.prototype.changeQuestionFlags = function()
 {
     var val = $('#new_question_flags').val();
-    if(val == <? echo QUESTION_FLAG_PART_ALL; ?>)
+    if(val == <?php echo QUESTION_FLAG_PART_ALL; ?>)
     {
         $('#row_question_unlisted_manipulation').show();
     }else
@@ -263,19 +263,19 @@ _Wikiargument.prototype.changeQuestionFlags = function()
 
 _Wikiargument.prototype.deleteGroup = function()
 {
-    this.raisePrompt("<? echo $sTemplate->getString("GROUP_DELETE_GROUP_PROMPT"); ?>", function(){ $("#form_delete_group").submit(); }, function(){ return false; });
+    this.raisePrompt("<?php echo $sTemplate->getString("GROUP_DELETE_GROUP_PROMPT"); ?>", function(){ $("#form_delete_group").submit(); }, function(){ return false; });
     return false;
 };
 
 _Wikiargument.prototype.changeOwnership = function()
 {
-    this.raisePrompt("<? echo $sTemplate->getString("GROUP_CHANGE_OWNERSHIP_PROMPT"); ?>", function(){ $("#form_change_ownership").submit(); }, function(){ return false; });
+    this.raisePrompt("<?php echo $sTemplate->getString("GROUP_CHANGE_OWNERSHIP_PROMPT"); ?>", function(){ $("#form_change_ownership").submit(); }, function(){ return false; });
 };
 
 _Wikiargument.prototype.newSponsorUpdatePaymentData = function()
 {
     var val = $('#sponsor_payment_method').val();
-    if(val == <? echo PAYMENT_METHOD_ELV; ?>)
+    if(val == <?php echo PAYMENT_METHOD_ELV; ?>)
     {
         $('#new_sponsor_elv').show();
     }else

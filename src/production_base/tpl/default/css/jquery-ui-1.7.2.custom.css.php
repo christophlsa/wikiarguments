@@ -1,4 +1,4 @@
-<?
+<?php
 include("./commonHeaders.php");
 header("Content-Type: text/css");
 ?>

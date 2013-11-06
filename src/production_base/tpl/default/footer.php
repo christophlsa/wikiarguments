@@ -1,4 +1,4 @@
-<?
+<?php
 /********************************************************************************
  * The contents of this file are subject to the Common Public Attribution License
  * Version 1.0 (the "License"); you may not use this file except in compliance
@@ -52,34 +52,34 @@ if($sPage->error())
 }
 ?>
 
-<? if($error) { ?>
+<?php if($error) { ?>
 <script>
-wikiargument.raiseError("<? echo $error; ?>");
+wikiargument.raiseError("<?php echo $error; ?>");
 </script>
-<? }else if($notice) { ?>
+<?php }else if($notice) { ?>
 <script>
-wikiargument.raiseNotice("<? echo $notice; ?>");
+wikiargument.raiseNotice("<?php echo $notice; ?>");
 </script>
-<? } ?>
+<?php } ?>
 </div>
   <div id = "footer">
     <div id = "footer_content">
-        <a href = '<? echo $sTemplate->getRoot(); ?>'><div id = "footer_logo"></div></a>
+        <a href = '<?php echo $sTemplate->getRoot(); ?>'><div id = "footer_logo"></div></a>
         <div id = "footer_copyright">
-          <? echo $sTemplate->getString("FOOTER_COPYRIGHT"); ?> |
-          <a href = '#' onclick = "$('#footer_menu').show(); return false;"><? echo $sTemplate->getString("FOOTER_MENU"); ?></a> |
+          <?php echo $sTemplate->getString("FOOTER_COPYRIGHT"); ?> |
+          <a href = '#' onclick = "$('#footer_menu').show(); return false;"><?php echo $sTemplate->getString("FOOTER_MENU"); ?></a> |
           <a href = 'http://www.wikiarguments.net'>Powered by Wikiarguments</a>
         </div>
         <div id = "footer_menu" style = "display: none;">
-          <? echo $sTemplate->getString("FOOTER_OPEN_SOURCE"); ?> |
-          <? echo $sTemplate->getString("CHANGELOG_URL"); ?><? echo $sTemplate->getString("FOOTER_CHANGELOG"); ?></a> |
-          <a href = '<? echo $sTemplate->getRoot(); ?>new-group/'><? echo $sTemplate->getString("FOOTER_NEW_GROUP"); ?></a> |
-          <? echo $sTemplate->getString("FOOTER_TOS"); ?> |
-          <a href = '#' onclick = "$('#footer_submenu').show(); return false;"><? echo $sTemplate->getString("LANGUAGE"); ?></a> 
+          <?php echo $sTemplate->getString("FOOTER_OPEN_SOURCE"); ?> |
+          <?php echo $sTemplate->getString("CHANGELOG_URL"); ?><?php echo $sTemplate->getString("FOOTER_CHANGELOG"); ?></a> |
+          <a href = '<?php echo $sTemplate->getRoot(); ?>new-group/'><?php echo $sTemplate->getString("FOOTER_NEW_GROUP"); ?></a> |
+          <?php echo $sTemplate->getString("FOOTER_TOS"); ?> |
+          <a href = '#' onclick = "$('#footer_submenu').show(); return false;"><?php echo $sTemplate->getString("LANGUAGE"); ?></a> 
         </div>
         <div id = "footer_submenu" style = "display: none;">
-          <? echo $sTemplate->getString("GERMAN_URL"); ?><? echo $sTemplate->getString("GERMAN"); ?></a> |
-          <? echo $sTemplate->getString("ENGLISH_URL"); ?><? echo $sTemplate->getString("ENGLISH"); ?></a>
+          <?php echo $sTemplate->getString("GERMAN_URL"); ?><?php echo $sTemplate->getString("GERMAN"); ?></a> |
+          <?php echo $sTemplate->getString("ENGLISH_URL"); ?><?php echo $sTemplate->getString("ENGLISH"); ?></a>
         </div>
         <div id="footer_socials">
             <ul>

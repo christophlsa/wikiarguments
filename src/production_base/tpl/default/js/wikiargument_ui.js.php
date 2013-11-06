@@ -1,4 +1,4 @@
-<?
+<?php
 /********************************************************************************
  * The contents of this file are subject to the Common Public Attribution License
  * Version 1.0 (the "License"); you may not use this file except in compliance
@@ -38,13 +38,13 @@ header("Content-Type: text/javascript");
 $(document).ready(function(){
 $("#new_argument_headline").bind("keyup", function(){
 
-$("#argument_headline_chars_left").text(<? echo MAX_ARGUMENT_HEADLINE_CHR_LENGTH;?>-$(this).val().length);
+$("#argument_headline_chars_left").text(<?php echo MAX_ARGUMENT_HEADLINE_CHR_LENGTH;?>-$(this).val().length);
 });
 
 
 $("#new_argument_abstract").bind("keyup", function(){
 
-$("#argument_headline_abs_chars_left").text(<? echo MAX_ARGUMENT_ABS_CHR_LENGTH;?>-$(this).val().length);
+$("#argument_headline_abs_chars_left").text(<?php echo MAX_ARGUMENT_ABS_CHR_LENGTH;?>-$(this).val().length);
 });
 
 $("#new_argument_details").bind("keyup", function(){
@@ -53,8 +53,8 @@ $("#argument_details_chars_written").text($(this).val().length);
 
 
 $(".clear_argument_form").bind("click", function(){
-$("#argument_headline_chars_left").text(<? echo MAX_ARGUMENT_HEADLINE_CHR_LENGTH;?>);
-$("#argument_headline_abs_chars_left").text(<? echo MAX_ARGUMENT_ABS_CHR_LENGTH;?>);
+$("#argument_headline_chars_left").text(<?php echo MAX_ARGUMENT_HEADLINE_CHR_LENGTH;?>);
+$("#argument_headline_abs_chars_left").text(<?php echo MAX_ARGUMENT_ABS_CHR_LENGTH;?>);
 $("#argument_details_chars_written").text("0");
 $('.new_argument textarea').val('');
 });
@@ -76,12 +76,12 @@ if($("#form_new_question").length>0){
 
 $("#new_question_title").bind("keyup", function(){
 
-$("#new_question_title_chars_left").text(<? echo MAX_QUESTION_CHR_LENGTH;?>-$(this).val().length);
+$("#new_question_title_chars_left").text(<?php echo MAX_QUESTION_CHR_LENGTH;?>-$(this).val().length);
 });
 
 $("#new_question_tags").bind("keyup", function(){
 
-$("#new_question_tags_chars_left").text(<? echo MAX_TAGS_CHR_LENGTH;?>-$(this).val().length);
+$("#new_question_tags_chars_left").text(<?php echo MAX_TAGS_CHR_LENGTH;?>-$(this).val().length);
 });
 
 $("#new_question_details").bind("keyup", function(){
@@ -93,7 +93,7 @@ if($("#form_new_group").length>0){
 
 $("#new_group_title").bind("keyup", function(){
 
-$("#new_group_title_chars_left").text(<? echo MAX_GROUP_NAME_CHR_LENGTH;?>-$(this).val().length);
+$("#new_group_title_chars_left").text(<?php echo MAX_GROUP_NAME_CHR_LENGTH;?>-$(this).val().length);
 });
 }
 

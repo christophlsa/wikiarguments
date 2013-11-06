@@ -1,4 +1,4 @@
-<?
+<?php
 /********************************************************************************
  * The contents of this file are subject to the Common Public Attribution License
  * Version 1.0 (the "License"); you may not use this file except in compliance
@@ -37,54 +37,54 @@ global $sTemplate, $sUser, $sDB, $sPacket, $sPage;
 $page       = "";
 $language   = $sTemplate->getLangBase();
 ?>
-<? include($sTemplate->getTemplateRootAbs()."header.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."header.php"); ?>
 
 <div id = "content">
 
-<?
+<?php
 if(count($sPage->getTags()) > 0)
 {
 ?>
 
 <div class = "filter">
-  <? echo $sTemplate->getString("TAGS_FILTER", Array("[TAGS]"), Array($sPage->getTagsString())); ?>
+  <?php echo $sTemplate->getString("TAGS_FILTER", Array("[TAGS]"), Array($sPage->getTagsString())); ?>
   <div class = "remove">
-    <a href = '<? echo $sPage->basePathNoFilter(); ?>'>
-      <span><? echo $sTemplate->getString("TAGS_FILTER_REMOVE"); ?></span>
+    <a href = '<?php echo $sPage->basePathNoFilter(); ?>'>
+      <span><?php echo $sTemplate->getString("TAGS_FILTER_REMOVE"); ?></span>
       <div class = "remove_icon"></div>
     </a>
   </div>
 </div>
 
-<?
+<?php
 }
 ?>
 
-<? foreach($sPage->getQuestions() as $k => $v)
+<?php foreach($sPage->getQuestions() as $k => $v)
 {
     drawQuestionBox($v);
 }
 ?>
 
-<? if(!$sUser->isLoggedIn()) { ?>
-<a href = '<? echo $sTemplate->getRoot(); ?>new-question/' onclick = "wikiargument.raiseError('<? echo $sTemplate->getString("ERROR_NOT_LOGGED_IN") ?>'); return false;">
-  <button class = 'button_orange button_new_question'><? echo $sTemplate->getString("NEW_QUESTION"); ?></button>
+<?php if(!$sUser->isLoggedIn()) { ?>
+<a href = '<?php echo $sTemplate->getRoot(); ?>new-question/' onclick = "wikiargument.raiseError('<?php echo $sTemplate->getString("ERROR_NOT_LOGGED_IN") ?>'); return false;">
+  <button class = 'button_orange button_new_question'><?php echo $sTemplate->getString("NEW_QUESTION"); ?></button>
 </a>
-<? }else if($sPage->group() && $sPage->group()->getPermission($sUser, ACTION_NEW_QUESTION) == PERMISSION_DISALLOWED) { ?>
-<a href = '<? echo $sTemplate->getRoot(); ?>new-question/' onclick = "wikiargument.raiseError('<? echo $sTemplate->getString("NOTICE_NEW_QUESTION_NO_PERMISSION") ?>'); return false;">
-  <button class = 'button_orange button_new_question'><? echo $sTemplate->getString("NEW_QUESTION"); ?></button>
+<?php }else if($sPage->group() && $sPage->group()->getPermission($sUser, ACTION_NEW_QUESTION) == PERMISSION_DISALLOWED) { ?>
+<a href = '<?php echo $sTemplate->getRoot(); ?>new-question/' onclick = "wikiargument.raiseError('<?php echo $sTemplate->getString("NOTICE_NEW_QUESTION_NO_PERMISSION") ?>'); return false;">
+  <button class = 'button_orange button_new_question'><?php echo $sTemplate->getString("NEW_QUESTION"); ?></button>
 </a>
-<? }else if($sPage->group()) { ?>
-<a href = '<? echo $sTemplate->getRoot(); ?>groups/<? echo $sPage->group()->url(); ?>/new-question/'>
-  <div class = 'button_orange button_new_question'><? echo $sTemplate->getString("NEW_QUESTION"); ?></div>
+<?php }else if($sPage->group()) { ?>
+<a href = '<?php echo $sTemplate->getRoot(); ?>groups/<?php echo $sPage->group()->url(); ?>/new-question/'>
+  <div class = 'button_orange button_new_question'><?php echo $sTemplate->getString("NEW_QUESTION"); ?></div>
 </a>
-<? }else { ?>
-<a href = '<? echo $sTemplate->getRoot(); ?>new-question/'>
-  <div class = 'button_orange button_new_question'><? echo $sTemplate->getString("NEW_QUESTION"); ?></div>
+<?php }else { ?>
+<a href = '<?php echo $sTemplate->getRoot(); ?>new-question/'>
+  <div class = 'button_orange button_new_question'><?php echo $sTemplate->getString("NEW_QUESTION"); ?></div>
 </a>
-<? } ?>
+<?php } ?>
 
-<?
+<?php
 if(count($sPage->getTags()) > 0)
 {
     drawPagination($sPage->getPage(), $sPage->numPages(), 5, $sPage->basePath(), "pagination_questions");
@@ -96,4 +96,4 @@ if(count($sPage->getTags()) > 0)
 
 </div>
 
-<? include($sTemplate->getTemplateRootAbs()."footer.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."footer.php"); ?>

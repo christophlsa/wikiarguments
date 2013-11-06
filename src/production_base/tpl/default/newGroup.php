@@ -37,32 +37,32 @@ global $sTemplate, $sUser, $sDB, $sPacket, $sPage;
 $page       = "";
 $language   = $sTemplate->getLangBase();
 ?>
-<? include($sTemplate->getTemplateRootAbs()."header.php"); ?> 
+<?php include($sTemplate->getTemplateRootAbs()."header.php"); ?> 
 
 <div id = "content_wide">
   <div class = "thin">
-    <form action = "<? echo $sTemplate->getRoot(); ?>new-group/" method = "POST" id = "form_new_group">
+    <form action = "<?php echo $sTemplate->getRoot(); ?>new-group/" method = "POST" id = "form_new_group">
       <div class = "new_question">
         <div class = "row">
-          <div class = "headline"><? echo $sTemplate->getString("NEW_GROUP_HEADLINE"); ?></div>
+          <div class = "headline"><?php echo $sTemplate->getString("NEW_GROUP_HEADLINE"); ?></div>
         </div>
         <div class = "row">
-          <div class = "label"><? echo $sTemplate->getString("NEW_GROUP_TITLE"); ?></div>
+          <div class = "label"><?php echo $sTemplate->getString("NEW_GROUP_TITLE"); ?></div>
           <div class = "input full_width" id = "input_new_group_title">
             <input id = "new_group_title" name = "new_group_title" maxlength="<?echo MAX_GROUP_NAME_CHR_LENGTH ?>" /><br />
-            <span class="characters_left"><span id="new_group_title_chars_left"><?echo MAX_GROUP_NAME_CHR_LENGTH ?></span> <? echo $sTemplate->getString("CHARS_WRITTEN_LEFT"); ?> </span>
+            <span class="characters_left"><span id="new_group_title_chars_left"><?echo MAX_GROUP_NAME_CHR_LENGTH ?></span> <?php echo $sTemplate->getString("CHARS_WRITTEN_LEFT"); ?> </span>
           </div>
         </div>
 
         <div class = "row">
           <div class="full_width">
-			  <div class = "label"><? echo $sTemplate->getString("NEW_GROUP_VISIBILITY"); ?></div>
+			  <div class = "label"><?php echo $sTemplate->getString("NEW_GROUP_VISIBILITY"); ?></div>
 			  <div class = "input">
 				<select name = "new_group_visibility" id = "new_group_visibility" class="wide">
-				  <option value = "<? echo VISIBILITY_PUBLIC; ?>"><? echo $sTemplate->getString("GROUP_VISIBILITY_PUBLIC"); ?></option>
-				  <option value = "<? echo VISIBILITY_PRIVATE; ?>"><? echo $sTemplate->getString("GROUP_VISIBILITY_PRIVATE"); ?></option>
+				  <option value = "<?php echo VISIBILITY_PUBLIC; ?>"><?php echo $sTemplate->getString("GROUP_VISIBILITY_PUBLIC"); ?></option>
+				  <option value = "<?php echo VISIBILITY_PRIVATE; ?>"><?php echo $sTemplate->getString("GROUP_VISIBILITY_PRIVATE"); ?></option>
 				</select>
-				<span class = "button_orange right_align" onclick = "$('#form_new_group').submit(); $(this).attr('disabled','disabled'); return false;"><? echo $sTemplate->getString("SUBMIT_NEW_GROUP"); ?></span>  
+				<span class = "button_orange right_align" onclick = "$('#form_new_group').submit(); $(this).attr('disabled','disabled'); return false;"><?php echo $sTemplate->getString("SUBMIT_NEW_GROUP"); ?></span>  
 			  </div>
 		  </div>
 		  
@@ -77,4 +77,4 @@ $language   = $sTemplate->getLangBase();
   </div>
 </div>
 
-<? include($sTemplate->getTemplateRootAbs()."footer.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."footer.php"); ?>

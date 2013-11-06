@@ -38,25 +38,25 @@ $page       = "";
 $language   = $sTemplate->getLangBase();
 $user       = $sPage->getUser();
 ?>
-<? include($sTemplate->getTemplateRootAbs()."header.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."header.php"); ?>
 
 <div id = "content_wide">
   <div class = "thin">
       <div class = "profile">
         <div class = "row">
-          <div class = "headline"><? echo $sTemplate->getString("PROFILE_HEADLINE", Array("[USERNAME]"), Array($user->getUserName())); ?></div>
-          <div class = "signup_date"><? echo $sTemplate->getString("PROFILE_SIGNUP_DATE", Array("[SIGNUP_DATE]"), Array($user->getSignupDate())) ?></div>
+          <div class = "headline"><?php echo $sTemplate->getString("PROFILE_HEADLINE", Array("[USERNAME]"), Array($user->getUserName())); ?></div>
+          <div class = "signup_date"><?php echo $sTemplate->getString("PROFILE_SIGNUP_DATE", Array("[SIGNUP_DATE]"), Array($user->getSignupDate())) ?></div>
         </div>
         <div class = "row seperator">
         </div>
         <div class = "row">
           <div class = "profile_score_questions">
-            <div class = "score"><? echo $user->getScoreQuestions(); ?></div>
-            <p class = "score_text"><? echo $sTemplate->getString("PROFILE_QUESTION_POINTS"); ?></p>
+            <div class = "score"><?php echo $user->getScoreQuestions(); ?></div>
+            <p class = "score_text"><?php echo $sTemplate->getString("PROFILE_QUESTION_POINTS"); ?></p>
           </div>
           <div class = "profile_score_arguments">
-            <div class = "score"><? echo $user->getScoreArguments(); ?></div>
-            <p class = "score_text"><? echo $sTemplate->getString("PROFILE_ARGUMENT_POINTS"); ?></p>
+            <div class = "score"><?php echo $user->getScoreArguments(); ?></div>
+            <p class = "score_text"><?php echo $sTemplate->getString("PROFILE_ARGUMENT_POINTS"); ?></p>
           </div>
           <div class = "clear"></div>
         </div>
@@ -113,4 +113,4 @@ $user       = $sPage->getUser();
 
 </div>
 
-<? include($sTemplate->getTemplateRootAbs()."footer.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."footer.php"); ?>

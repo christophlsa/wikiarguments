@@ -37,46 +37,46 @@ global $sTemplate, $sUser, $sDB, $sPacket, $sPage;
 $page       = "";
 $language   = $sTemplate->getLangBase();
 ?>
-<? include($sTemplate->getTemplateRootAbs()."header.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."header.php"); ?>
 
 <div id = "content_wide">
   <div class = "thin">
 
   <div class = "signup">
-    <form id = "form_submit" action = "<? echo $sTemplate->getRoot(); ?>signup/" method = "POST">
+    <form id = "form_submit" action = "<?php echo $sTemplate->getRoot(); ?>signup/" method = "POST">
       <div class = "row">
-        <div class = "headline"><? echo $sTemplate->getString("SIGNUP_HEADLINE"); ?></div>
+        <div class = "headline"><?php echo $sTemplate->getString("SIGNUP_HEADLINE"); ?></div>
       </div>
       <div class = "row">
-        <div class = "label"><? echo $sTemplate->getString("SIGNUP_USERNAME"); ?></div>
+        <div class = "label"><?php echo $sTemplate->getString("SIGNUP_USERNAME"); ?></div>
         <div class = "input">
-          <input type = "text" id = "signup_username" name = "signup_username" value = "<? echo $sRequest->getStringPlain("signup_username"); ?>"></input>
+          <input type = "text" id = "signup_username" name = "signup_username" value = "<?php echo $sRequest->getStringPlain("signup_username"); ?>"></input>
         </div>
       </div>
 
       <div class = "row">
-        <div class = "label"><? echo $sTemplate->getString("SIGNUP_PASSWORD"); ?></div>
+        <div class = "label"><?php echo $sTemplate->getString("SIGNUP_PASSWORD"); ?></div>
         <div class = "input">
           <input type = "password" id = "signup_password" name = "signup_password"></input>
         </div>
       </div>
 
       <div class = "row">
-        <div class = "label"><? echo $sTemplate->getString("SIGNUP_PASSWORD_REPEAT"); ?></div>
+        <div class = "label"><?php echo $sTemplate->getString("SIGNUP_PASSWORD_REPEAT"); ?></div>
         <div class = "input">
           <input type = "password" id = "signup_password_2" name = "signup_password_2"></input>
         </div>
       </div>
 
       <div class = "row">
-        <div class = "label"><? echo $sTemplate->getString("SIGNUP_EMAIL"); ?></div>
+        <div class = "label"><?php echo $sTemplate->getString("SIGNUP_EMAIL"); ?></div>
         <div class = "input">
-          <input type = "text" id = "signup_email" name = "signup_email" value = "<? echo $sRequest->getStringPlain("signup_email"); ?>"></input>
+          <input type = "text" id = "signup_email" name = "signup_email" value = "<?php echo $sRequest->getStringPlain("signup_email"); ?>"></input>
         </div>
       </div>
 
       <div class = "row row_submit">
-        <button class = "button_orange" onclick = "$('#form_submit').submit(); return false;"><? echo $sTemplate->getString("SIGNUP_SUBMIT"); ?></button>
+        <button class = "button_orange" onclick = "$('#form_submit').submit(); return false;"><?php echo $sTemplate->getString("SIGNUP_SUBMIT"); ?></button>
       </div>
 
       <input type = "hidden" name = "signup" value = "1" />
@@ -84,27 +84,27 @@ $language   = $sTemplate->getLangBase();
   </div>
 
   <div class = "login">
-    <form id = "form_login" action = "<? echo $sTemplate->getRoot(); ?>signup/" method = "POST">
+    <form id = "form_login" action = "<?php echo $sTemplate->getRoot(); ?>signup/" method = "POST">
       <div class = "row">
-        <div class = "headline"><? echo $sTemplate->getString("LOGIN_HEADLINE"); ?></div>
+        <div class = "headline"><?php echo $sTemplate->getString("LOGIN_HEADLINE"); ?></div>
       </div>
       <div class = "row" style = "margin-top: 35px;">
-        <div class = "label"><? echo $sTemplate->getString("LOGIN_USERNAME"); ?></div>
+        <div class = "label"><?php echo $sTemplate->getString("LOGIN_USERNAME"); ?></div>
         <div class = "input">
           <input type = "text" id = "login_username" name = "login_username"></input>
         </div>
       </div>
 
       <div class = "row">
-        <div class = "label"><? echo $sTemplate->getString("LOGIN_PASSWORD"); ?></div>
+        <div class = "label"><?php echo $sTemplate->getString("LOGIN_PASSWORD"); ?></div>
         <div class = "input">
           <input type = "password" id = "login_password" name = "login_password"></input>
         </div>
       </div>
 
       <div class = "row row_submit">
-        <span class = "button_blue" onclick = "wikiargument.passRequest(); return false;"><? echo $sTemplate->getString("LOGIN_FORGOT_PASSWORD"); ?></span>
-        <button class = "button_blue" onclick = "$('#form_login').submit();"><? echo $sTemplate->getString("LOGIN_SUBMIT"); ?></button>
+        <span class = "button_blue" onclick = "wikiargument.passRequest(); return false;"><?php echo $sTemplate->getString("LOGIN_FORGOT_PASSWORD"); ?></span>
+        <button class = "button_blue" onclick = "$('#form_login').submit();"><?php echo $sTemplate->getString("LOGIN_SUBMIT"); ?></button>
       </div>
 
       <input type = "hidden" name = "login" id = "login_mode_login" value = "1" />
@@ -118,4 +118,4 @@ $language   = $sTemplate->getLangBase();
 
 </div>
 
-<? include($sTemplate->getTemplateRootAbs()."footer.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."footer.php"); ?>

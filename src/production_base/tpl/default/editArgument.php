@@ -37,7 +37,7 @@ global $sTemplate, $sUser, $sDB, $sPacket, $sPage;
 $page       = "";
 $language   = $sTemplate->getLangBase();
 ?>
-<? include($sTemplate->getTemplateRootAbs()."header.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."header.php"); ?>
 
 <div id = "content_wide">
   <div class = "thin">
@@ -48,31 +48,31 @@ drawQuestionBoxExtended($sPage->getQuestion(), $sPage->getView(), $sPage->basePa
     <form action = "" method = "POST" id = "edit_argument">
       <div class = "new_argument">
         <div class = "row">
-          <div class = "label"><? echo $sTemplate->getString("NEW_ARGUMENT_HEADLINE"); ?></div>
+          <div class = "label"><?php echo $sTemplate->getString("NEW_ARGUMENT_HEADLINE"); ?></div>
           <div class = "input">
-            <textarea id = "new_argument_headline" name = "new_argument_headline" maxlength="<? echo MAX_ARGUMENT_HEADLINE_CHR_LENGTH;?> "><? echo $sPage->argument()->headlinePlain(); ?></textarea>
-            <span class="characters_left"><span id="argument_headline_chars_left"><? echo MAX_ARGUMENT_HEADLINE_CHR_LENGTH - strlen($sPage->argument()->headlinePlain());?></span> <? echo $sTemplate->getString("CHARS_WRITTEN_LEFT"); ?></span>
+            <textarea id = "new_argument_headline" name = "new_argument_headline" maxlength="<?php echo MAX_ARGUMENT_HEADLINE_CHR_LENGTH;?> "><?php echo $sPage->argument()->headlinePlain(); ?></textarea>
+            <span class="characters_left"><span id="argument_headline_chars_left"><?php echo MAX_ARGUMENT_HEADLINE_CHR_LENGTH - strlen($sPage->argument()->headlinePlain());?></span> <?php echo $sTemplate->getString("CHARS_WRITTEN_LEFT"); ?></span>
           </div>
         </div>
 
         <div class = "row">
-          <div class = "label"><? echo $sTemplate->getString("NEW_ARGUMENT_ABSTRACT"); ?></div>
+          <div class = "label"><?php echo $sTemplate->getString("NEW_ARGUMENT_ABSTRACT"); ?></div>
           <div class = "input">
-            <textarea id = "new_argument_abstract" name = "new_argument_abstract" maxlength="<? echo MAX_ARGUMENT_ABS_CHR_LENGTH;?>"><? echo $sPage->argument()->abstractTextPlain(); ?></textarea>
-            <span class="characters_left"><span id="argument_headline_abs_chars_left"><? echo MAX_ARGUMENT_ABS_CHR_LENGTH - strlen($sPage->argument()->abstractTextPlain());?></span> <? echo $sTemplate->getString("CHARS_WRITTEN_LEFT"); ?></span>
+            <textarea id = "new_argument_abstract" name = "new_argument_abstract" maxlength="<?php echo MAX_ARGUMENT_ABS_CHR_LENGTH;?>"><?php echo $sPage->argument()->abstractTextPlain(); ?></textarea>
+            <span class="characters_left"><span id="argument_headline_abs_chars_left"><?php echo MAX_ARGUMENT_ABS_CHR_LENGTH - strlen($sPage->argument()->abstractTextPlain());?></span> <?php echo $sTemplate->getString("CHARS_WRITTEN_LEFT"); ?></span>
           </div>
         </div>
 
         <div class = "row">
-          <div class = "label"><? echo $sTemplate->getString("NEW_ARGUMENT_DETAILS"); ?></div>
+          <div class = "label"><?php echo $sTemplate->getString("NEW_ARGUMENT_DETAILS"); ?></div>
           <div class = "input">
-            <textarea id = "new_argument_details" name = "new_argument_details"><? echo $sPage->argument()->detailsPlain(); ?></textarea>
-            <span class="characters_written"><span id="argument_details_chars_written"><? echo strlen($sPage->argument()->detailsPlain()); ?></span> <? echo $sTemplate->getString("CHARS_WRITTEN"); ?></span>
+            <textarea id = "new_argument_details" name = "new_argument_details"><?php echo $sPage->argument()->detailsPlain(); ?></textarea>
+            <span class="characters_written"><span id="argument_details_chars_written"><?php echo strlen($sPage->argument()->detailsPlain()); ?></span> <?php echo $sTemplate->getString("CHARS_WRITTEN"); ?></span>
           </div>
         </div>
 
         <div class = "row row_submit">
-        <button class = "button_orange" id = "buttonSubmit" onclick = "wikiargument.submitArgument('#edit_argument', '#buttonSubmit'); return false;"><? echo $sTemplate->getString("SUBMIT_NEW_ARGUMENT"); ?></button>
+        <button class = "button_orange" id = "buttonSubmit" onclick = "wikiargument.submitArgument('#edit_argument', '#buttonSubmit'); return false;"><?php echo $sTemplate->getString("SUBMIT_NEW_ARGUMENT"); ?></button>
         </div>
         <input type = "hidden" name = "edit_argument" value = "1" />
       </div>
@@ -81,4 +81,4 @@ drawQuestionBoxExtended($sPage->getQuestion(), $sPage->getView(), $sPage->basePa
   </div>
 </div>
 
-<? include($sTemplate->getTemplateRootAbs()."footer.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."footer.php"); ?>

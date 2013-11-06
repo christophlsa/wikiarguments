@@ -37,70 +37,70 @@ global $sTemplate, $sUser, $sDB, $sPacket, $sPage;
 $page       = "";
 $language   = $sTemplate->getLangBase();
 ?>
-<? include($sTemplate->getTemplateRootAbs()."header.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."header.php"); ?>
 
 <div id = "content_wide">
   <div class = "thin">
-    <form action = "<? echo $sPage->getFormUrl(); ?>" method = "POST" id = "form_new_question">
+    <form action = "<?php echo $sPage->getFormUrl(); ?>" method = "POST" id = "form_new_question">
       <div class = "new_question">
         <div class = "row">
-          <div class = "headline"><? echo $sTemplate->getString("NEW_QUESTION_HEADLINE"); ?></div>
+          <div class = "headline"><?php echo $sTemplate->getString("NEW_QUESTION_HEADLINE"); ?></div>
         </div>
         <div class = "row">
-          <div class = "label"><? echo $sTemplate->getString("NEW_QUESTION_TITLE"); ?></div>
+          <div class = "label"><?php echo $sTemplate->getString("NEW_QUESTION_TITLE"); ?></div>
           <div class = "input">
             <textarea id = "new_question_title" name = "new_question_title" maxlength="<?echo MAX_QUESTION_CHR_LENGTH ?>"></textarea>
-            <span class="characters_left"><span id="new_question_title_chars_left"><?echo MAX_QUESTION_CHR_LENGTH ?></span> <? echo $sTemplate->getString("CHARS_WRITTEN_LEFT"); ?> </span>
+            <span class="characters_left"><span id="new_question_title_chars_left"><?echo MAX_QUESTION_CHR_LENGTH ?></span> <?php echo $sTemplate->getString("CHARS_WRITTEN_LEFT"); ?> </span>
           </div>
         </div>
 
         <div class = "row">
-          <div class = "label"><? echo $sTemplate->getString("NEW_QUESTION_DETAILS"); ?></div>
+          <div class = "label"><?php echo $sTemplate->getString("NEW_QUESTION_DETAILS"); ?></div>
           <div class = "input">
             <textarea id = "new_question_details" name = "new_question_details"></textarea>
-            <span class="characters_left"><span id="new_question_details_chars_left">0</span> <? echo $sTemplate->getString("CHARS_WRITTEN"); ?> </span>
+            <span class="characters_left"><span id="new_question_details_chars_left">0</span> <?php echo $sTemplate->getString("CHARS_WRITTEN"); ?> </span>
           </div>
         </div>
 
         <div class = "row">
-          <div class = "label"><? echo $sTemplate->getString("NEW_QUESTION_TAGS"); ?></div>
+          <div class = "label"><?php echo $sTemplate->getString("NEW_QUESTION_TAGS"); ?></div>
           <div class = "input">
             <textarea id = "new_question_tags" name = "new_question_tags" maxlength="<?echo MAX_TAGS_CHR_LENGTH ?>"></textarea>
-            <span class="characters_left"><? echo $sTemplate->getString("TAGS_DIVIDE"); ?> <span id="new_question_tags_chars_left"><?echo MAX_TAGS_CHR_LENGTH ?></span> <? echo $sTemplate->getString("CHARS_WRITTEN_LEFT"); ?></span>
+            <span class="characters_left"><?php echo $sTemplate->getString("TAGS_DIVIDE"); ?> <span id="new_question_tags_chars_left"><?echo MAX_TAGS_CHR_LENGTH ?></span> <?php echo $sTemplate->getString("CHARS_WRITTEN_LEFT"); ?></span>
           </div>
         </div>
 
         <div class = "row">
-          <div class = "label2"><? echo $sTemplate->getString("NEW_QUESTION_TYPE"); ?></div>
+          <div class = "label2"><?php echo $sTemplate->getString("NEW_QUESTION_TYPE"); ?></div>
           <div class = "input">
             <select name = "new_question_type" id = "new_question_type" onchange = "wikiargument.changeQuestionType();">
-              <option value = "<? echo QUESTION_TYPE_LISTED; ?>" selected><? echo $sTemplate->getString("QUESTION_TYPE_LISTED"); ?></option>
-              <option value = "<? echo QUESTION_TYPE_UNLISTED; ?>"><? echo $sTemplate->getString("QUESTION_TYPE_UNLISTED"); ?></option>
+              <option value = "<?php echo QUESTION_TYPE_LISTED; ?>" selected><?php echo $sTemplate->getString("QUESTION_TYPE_LISTED"); ?></option>
+              <option value = "<?php echo QUESTION_TYPE_UNLISTED; ?>"><?php echo $sTemplate->getString("QUESTION_TYPE_UNLISTED"); ?></option>
             </select>
           </div>
         </div>
 
         <div class = "row" id = "row_question_flags" style = "display: none;">
-          <div class = "label2"><? echo $sTemplate->getString("NEW_QUESTION_FLAGS"); ?></div>
+          <div class = "label2"><?php echo $sTemplate->getString("NEW_QUESTION_FLAGS"); ?></div>
           <div class = "input">
             <select name = "new_question_flags" id = "new_question_flags" onchange = "wikiargument.changeQuestionFlags();">
-              <option value = "0" selected><? echo $sTemplate->getString("PARTICIPATION_ONLY_REGISTERED"); ?></option>
-              <option value = "<? echo QUESTION_FLAG_PART_ALL; ?>"><? echo $sTemplate->getString("PARTICIPATION_ALL"); ?></option>
+              <option value = "0" selected><?php echo $sTemplate->getString("PARTICIPATION_ONLY_REGISTERED"); ?></option>
+              <option value = "<?php echo QUESTION_FLAG_PART_ALL; ?>"><?php echo $sTemplate->getString("PARTICIPATION_ALL"); ?></option>
             </select>
           </div>
         </div>
 
         <div class = "row" id = "row_question_unlisted_manipulation" style = "display: none;">
-          <? echo $sTemplate->getString("NOTICE_NEW_QUESTION_UNLISTED_MANIPULATION"); ?>
+          <?php echo $sTemplate->getString("NOTICE_NEW_QUESTION_UNLISTED_MANIPULATION"); ?>
         </div>
 
         <div class = "row row_submit">
 <?
 /*
-            <button class = "button_blue clear_form_button" onclick = "$('.new_question textarea').val(''); return false;"><? echo "Clear form" ?></button>
+            <button class = "button_blue clear_form_button" onclick = "$('.new_question textarea').val(''); return false;"><?php echo "Clear form" ?></button>
 */
 ?>
-            <span class = "button_orange" onclick = "$('#form_new_question').submit(); $(this).attr('disabled','disabled'); return false;"><? echo $sTemplate->getString("SUBMIT_NEW_QUESTION"); ?></span>
+            <span class = "button_orange" onclick = "$('#form_new_question').submit(); $(this).attr('disabled','disabled'); return false;"><?php echo $sTemplate->getString("SUBMIT_NEW_QUESTION"); ?></span>
         </div>
       </div>
       <input type = "hidden" name = "new_question" value = "1" />
@@ -124,4 +124,4 @@ $language   = $sTemplate->getLangBase();
   </div>
 </div>
 
-<? include($sTemplate->getTemplateRootAbs()."footer.php"); ?>
+<?php include($sTemplate->getTemplateRootAbs()."footer.php"); ?>
