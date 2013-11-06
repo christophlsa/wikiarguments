@@ -210,6 +210,7 @@ INSERT INTO `localization` (`loc_key`, `loc_language`, `loc_val`) VALUES
 ('SIGNUP_CONFIRMATION_EMAIL_SUBJECT', 'de', 'Wikiarguments Registration'),
 ('SIGNUP_EMAIL', 'de', 'Email'),
 ('SIGNUP_ERROR_ALREADY_LOGGED_IN', 'de', 'Du bist bereits eingeloggt.'),
+('SIGNUP_ERROR_EMAIL_DOMAIN_NOT_ALLOWED', 'de', 'Du darfst dich nur mit E-Mail Adressen dieser Domains registrieren: [DOMAINS].'),
 ('SIGNUP_ERROR_EMAIL_IN_USE', 'de', 'Diese Email wird bereits verwendet.'),
 ('SIGNUP_ERROR_GENERAL', 'de', 'Unbekannter Fehler'),
 ('SIGNUP_ERROR_INVALID_USERNAME', 'de', 'Ungültiger Benutzername'),
@@ -451,6 +452,7 @@ INSERT INTO `localization` (`loc_key`, `loc_language`, `loc_val`) VALUES
 ('SIGNUP_CONFIRMATION_EMAIL_SUBJECT', 'en', 'Wikiarguments Registration'),
 ('SIGNUP_EMAIL', 'en', 'Email'),
 ('SIGNUP_ERROR_ALREADY_LOGGED_IN', 'en', 'You''re already logged-in'),
+('SIGNUP_ERROR_EMAIL_DOMAIN_NOT_ALLOWED', 'en', 'You can register only with email addresses of these domains: [DOMAINS].')
 ('SIGNUP_ERROR_EMAIL_IN_USE', 'en', 'This Email is already in use.'),
 ('SIGNUP_ERROR_GENERAL', 'en', 'Unknown error.'),
 ('SIGNUP_ERROR_INVALID_USERNAME', 'en', 'Unvalid Username'),

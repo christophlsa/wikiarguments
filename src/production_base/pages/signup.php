@@ -137,6 +137,18 @@ class PageSignup extends Page
                 return false;
             }
 
+            if(defined('ALLOWED_EMAIL_DOMAINS'))
+            {
+                $allowed_email_domains = explode(",", ALLOWED_EMAIL_DOMAINS);
+                $splited = explode("@", $email);
+
+                if($splited === false || count($splited) != 2 || !in_array($splited[1], $allowed_email_domains))
+                {
+                    $this->setError($sTemplate->getString("SIGNUP_ERROR_EMAIL_DOMAIN_NOT_ALLOWED", array("[DOMAINS]"), array(implode(", ", $allowed_email_domains))));
+                    return false;
+                }
+            }
+
             if($password != $password2 || $password == "")
             {
                 $this->setError($sTemplate->getString("SIGNUP_ERROR_PASSWORD_MISMATCH"));

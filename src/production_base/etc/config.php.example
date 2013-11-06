@@ -66,6 +66,9 @@ define("SHORTURL_BASE",                     "http://wa.nf/");
 define("SENDMAIL_FROM",                     "");
 define("SENDMAIL_FROM_NAME",                "");
 
+/* allow e-mail hosts (comma seperated without spaces) */
+//define("ALLOWED_EMAIL_DOMAINS",             "example.com,example.org");
+
 setlocale(LC_ALL, 'de_DE');
 
 define("JS_USE_MIN",                        false);
