@@ -271,15 +271,3 @@ _Wikiargument.prototype.changeOwnership = function()
 {
     this.raisePrompt("<?php echo $sTemplate->getString("GROUP_CHANGE_OWNERSHIP_PROMPT"); ?>", function(){ $("#form_change_ownership").submit(); }, function(){ return false; });
 };
-
-_Wikiargument.prototype.newSponsorUpdatePaymentData = function()
-{
-    var val = $('#sponsor_payment_method').val();
-    if(val == <?php echo PAYMENT_METHOD_ELV; ?>)
-    {
-        $('#new_sponsor_elv').show();
-    }else
-    {
-        $('#new_sponsor_elv').hide();
-    }
-};
