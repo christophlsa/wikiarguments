@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `groups` (
   PRIMARY KEY (`groupId`),
   UNIQUE KEY `url` (`url`),
   KEY `title` (`title`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `group_permissions` (
   PRIMARY KEY (`id`),
   KEY `groupId` (`groupId`,`userId`),
   KEY `userId` (`userId`,`permission`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `user_groups` (
   `groupId` int(11) NOT NULL,
   `dateAdded` bigint(20) NOT NULL,
   UNIQUE KEY `userId` (`userId`,`groupId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
