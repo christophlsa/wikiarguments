@@ -76,7 +76,7 @@ class MemcachedMgr
     {
         $link = $this->getLinkByType($type);
 
-        if($link == -1)
+        if($link === false)
         {
             return false;
         }
@@ -90,7 +90,7 @@ class MemcachedMgr
     public function get($type, $prefix, $key)
     {
         $link = $this->getLinkByType($type);
-        if($link == -1)
+        if($link === false)
         {
             return false;
         }
@@ -110,7 +110,7 @@ class MemcachedMgr
     public function delete($type, $prefix, $key)
     {
         $link = $this->getLinkByType($type);
-        if($link == -1)
+        if($link === false)
         {
             return false;
         }
@@ -130,7 +130,7 @@ class MemcachedMgr
             return $this->link_data;
         }else
         {
-            return -1;
+            return false;
         }
     }
 
